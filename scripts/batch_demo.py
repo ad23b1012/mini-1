@@ -36,6 +36,8 @@ EMOTION_CLASSES = ["anger", "contempt", "disgust", "fear", "happy", "neutral", "
 MODELS = {
     "resnet18": "checkpoints/resnet18_best.pth",
     "efficientnet_b4": "checkpoints/efficientnet_b4_best.pth",
+    "convnext_tiny": "checkpoints/convnext_tiny_best.pth",
+    "regnet_y_800mf": "checkpoints/regnet_y_800mf_best.pth",
 }
 
 

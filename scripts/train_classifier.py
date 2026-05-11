@@ -22,15 +22,18 @@ from src.emotion.dataset import get_dataloader, get_num_classes, get_labels
 from src.visualization import plot_training_history
 
 
-# Recommended batch sizes per model for RTX 4060 (8GB VRAM)
+# Recommended batch sizes per model for RTX 4050/4060 (6-8GB VRAM)
 BATCH_SIZE_RECOMMENDATIONS = {
     "resnet18": 64,
     "resnet50_cbam": 32,
     "poster_v2": 32,
     "efficientnet_b4": 24,
+    "convnext_tiny": 32,       # 28M params — fits easily at batch 32
+    "regnet_y_800mf": 64,     # 6.3M params — very light, use large batch
 }
 
-ALL_MODELS = ["poster_v2", "resnet50_cbam", "resnet18", "efficientnet_b4"]
+ALL_MODELS = ["poster_v2", "resnet50_cbam", "resnet18", "efficientnet_b4",
+              "convnext_tiny", "regnet_y_800mf"]
 ALL_DATASETS = ["affectnet", "fer2013", "rafdb"]
 
 
@@ -43,6 +46,8 @@ def main():
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=None, help="Batch size (auto-selected if not specified)")
     parser.add_argument("--lr", type=float, default=1e-4)
+    parser.add_argument("--weight-decay", type=float, default=0.01,
+                        help="AdamW weight decay. Use 0.05 for ConvNeXt (paper default), 0.01 for CNNs.")
     parser.add_argument("--image-size", type=int, default=224)
     parser.add_argument("--num-workers", type=int, default=0, help="DataLoader workers (0 recommended on Windows)")
     parser.add_argument("--checkpoint-dir", type=str, default="checkpoints")
@@ -80,6 +85,7 @@ def main():
     print(f"Epochs:     {args.epochs}")
     print(f"Batch Size: {args.batch_size}")
     print(f"Learn Rate: {args.lr}")
+    print(f"Weight Dec: {args.weight_decay}")
     print(f"{'='*60}\n")
 
     # Speed up PyTorch convolution kernels dramatically for RTX cards
@@ -133,6 +139,7 @@ def main():
         model_name=args.model,
         num_classes=num_classes,
         learning_rate=args.lr,
+        weight_decay=args.weight_decay,
         epochs=args.epochs,
         class_weights=train_weights,
         use_amp=not args.no_amp,

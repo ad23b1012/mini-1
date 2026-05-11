@@ -246,9 +246,16 @@ def build_model(model_name: str = "poster_v2", num_classes: int = 8, pretrained:
     elif model_name == "efficientnet_b4":
         from src.emotion.efficientnet_b4 import EfficientNetB4FER
         model = EfficientNetB4FER(num_classes=num_classes, pretrained=pretrained)
+    elif model_name == "convnext_tiny":
+        from src.emotion.convnext import ConvNeXtTinyFER
+        model = ConvNeXtTinyFER(num_classes=num_classes, pretrained=pretrained)
+    elif model_name == "regnet_y_800mf":
+        from src.emotion.regnet import RegNetY800MF_FER
+        model = RegNetY800MF_FER(num_classes=num_classes, pretrained=pretrained)
     else:
         raise ValueError(
             f"Unknown model: {model_name}. "
-            f"Use 'poster_v2', 'resnet50_cbam', 'resnet18', or 'efficientnet_b4'."
+            f"Use 'poster_v2', 'resnet50_cbam', 'resnet18', 'efficientnet_b4', "
+            f"'convnext_tiny', or 'regnet_y_800mf'."
         )
     return model
