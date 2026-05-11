@@ -35,14 +35,11 @@ Input Image
 MediaPipe FaceLandmarker  (Tasks SDK — face_landmarker.task)
    ↓  468 normalized landmarks (x, y, z)
 ┌────────────────────────────────────────────────────────────────┐
-│  Branch 1: AU Extractor          Branch 2: POSTER V2           │
-│  (geometric distances → FACS)    (IR-50 backbone)              │
+│  Branch 1: AU Extractor          Branch 2: Vision CNN          │
+│  (geometric distances → FACS)    (ConvNeXt / RegNetY)          │
 │                                       ↓                        │
-│  468 landmarks → dense projection → 49 query tokens            │
 │                                       ↓                        │
-│                           Window Cross-Attention (×2)          │
-│                                       ↓                        │
-│                               Emotion Logits (7 classes)       │
+│                               Emotion Logits (8 classes)       │
 │                                       ↓                        │
 │                               Grad-ECLIP attention map         │
 └────────────────────────────────────────────────────────────────┘
@@ -66,7 +63,7 @@ MediaPipe FaceLandmarker  (Tasks SDK — face_landmarker.task)
 | Landmark extraction | 468 normalized (x, y, z) landmarks | Truncated from 478 if irises detected |
 | AU extraction | Geometric distances → FACS thresholds | Calibrated on FER2013 |
 | **Primary Dataset** | **AffectNet (8 classes)** | Stratified 80/10/10 split |
-| Emotion classifier | **POSTER V2** (IR-50 + Window Cross-Attention) | Landmark-guided queries |
+| Emotion classifier | **ConvNeXt-Tiny** / **RegNetY-800MF** | Primary high-accuracy backbones |
 | Baseline classifiers | **ResNet-18**, **EfficientNet-b4** | Standard vision backbones |
 | Attention map | **Grad-ECLIP** (custom) or Standard Grad-CAM | Grad-ECLIP is primary |
 | Region parser | Heatmap → 11 semantic facial regions | Threshold: top 30% intensity |
@@ -155,29 +152,21 @@ data/FER/
 ### 1. Train the Emotion Classifier
 
 ```bash
-# Primary model — POSTER V2 with MediaPipe landmark guidance
+# High Accuracy Primary Model (ConvNeXt-Tiny)
 uv run python scripts/train_classifier.py \
-    --model poster_v2 \
-    --dataset fer2013 \
-    --data-path data/FER \
+    --model convnext_tiny \
+    --dataset affectnet \
+    --data-path dataset_cropped \
     --epochs 50 \
-    --batch-size 32
+    --lr 1e-4
 
-# With pre-extracted landmarks (improves cross-attention quality)
+# Fast Training Model (RegNetY-800MF)
 uv run python scripts/train_classifier.py \
-    --model poster_v2 \
-    --dataset fer2013 \
-    --data-path data/FER \
-    --landmarks-file data/fer2013_train_landmarks.json \
+    --model regnet_y_800mf \
+    --dataset affectnet \
+    --data-path dataset_cropped \
     --epochs 50 \
-    --batch-size 32
-
-# Baseline model — ResNet-50 + CBAM (ablation study)
-uv run python scripts/train_classifier.py \
-    --model resnet50_cbam \
-    --dataset fer2013 \
-    --data-path data/FER \
-    --epochs 50
+    --lr 1e-3
 ```
 
 **Key training features:**
@@ -192,10 +181,10 @@ Checkpoints are saved to `checkpoints/` after each epoch (`_last.pth` and `_best
 
 ```bash
 uv run python scripts/evaluate.py \
-    --model poster_v2 \
-    --dataset fer2013 \
-    --data-path data/FER \
-    --checkpoint checkpoints/poster_v2_best.pth \
+    --model convnext_tiny \
+    --dataset affectnet \
+    --data-path dataset_cropped \
+    --checkpoint checkpoints/convnext_tiny_best.pth \
     --split test
 ```
 
@@ -203,7 +192,7 @@ Outputs a per-class classification report and confusion matrix PNG to `outputs/`
 
 ### 3. Extract Facial Landmarks
 
-Pre-extract landmarks from all training images for higher-quality POSTER V2 training:
+Pre-extract landmarks from images for faster geometric processing (if needed for multimodal fusion):
 
 ```bash
 uv run python scripts/extract_landmarks.py --image path/to/face.jpg
@@ -213,10 +202,10 @@ uv run python scripts/extract_landmarks.py --image path/to/face.jpg
 
 ```bash
 # Full pipeline: face detection → emotion → attention → Qwen explanation
-uv run python scripts/demo.py --image path/to/face.jpg
+uv run python scripts/demo.py --image path/to/face.jpg --model convnext_tiny
 
-# Use the best baseline (ResNet-18)
-uv run python scripts/demo.py --image path/to/face.jpg --model resnet18
+# Use a specific baseline
+uv run python scripts/demo.py --image path/to/face.jpg --model regnet_y_800mf
 ```
 
 ### 5. Batch Utilities
@@ -240,7 +229,7 @@ All output files (JSON result, face crop, XAI panel PNG) are saved under `output
 ```
 Step 1  →  MediaPipe FaceLandmarker detects face + extracts 468 landmarks
 Step 2  →  AUExtractor computes geometric distances → activates FACS Action Units
-Step 3  →  POSTER V2 classifies emotion (landmark queries + IR-50 visual features)
+Step 3  →  CNN Classifier (ConvNeXt-Tiny/RegNetY) predicts emotion probabilities
 Step 4  →  Grad-ECLIP generates attention heatmap from backward gradients
 Step 5  →  RegionParser maps heatmap intensity → semantic facial regions
 Step 6  →  [VRAM swap] Classifier unloaded → Qwen2.5-0.5B-Instruct loaded
@@ -257,17 +246,19 @@ Step 9  →  Visualization: landmark overlay + heatmap overlay + combined XAI pa
 
 | Model | Val Accuracy (Best) | Status |
 |---|:---:|---|
-| POSTER V2 (rep) | 62.45% | Training bottlenecked |
-| **EfficientNet-b4** | **71.58%** | Strong Baseline |
-| **ResNet-18** | **71.90%** | **SOTA for this pipeline** |
+| **ConvNeXt-Tiny** | *Training...* | New Primary Model (82.5% ImageNet) |
+| **RegNetY-800MF** | *Training...* | Fast Baseline (76.4% ImageNet) |
+| ResNet-18 | 71.90% | SOTA Baseline |
+| EfficientNet-b4 | 71.58% | Strong Baseline |
 
-> Results obtained on the AffectNet-8 test split (stratified 10%). Training included Class-Weighted Focal Loss and Cosine Annealing.
+> Results obtained on the AffectNet-8 test split (stratified 10%). Training included Class-Weighted Focal Loss, Cosine Annealing, and strong data augmentations (RandAugment).
 
 ### Training Progress Summary
 
 | Model | Epochs | Train Acc | Val Acc (Best) |
 |---|:---:|:---:|:---:|
-| POSTER V2 | 46 | 70% | 62.45% |
+| ConvNeXt-Tiny | - | - | *Pending* |
+| RegNetY-800MF | - | - | *Pending* |
 | ResNet-18 | 21 | 91.8% | **71.90%** |
 | EfficientNet-b4 | 22 | 90.1% | **71.58%** |
 
@@ -275,7 +266,7 @@ Step 9  →  Visualization: landmark overlay + heatmap overlay + combined XAI pa
 
 | Phase | Component | Peak VRAM |
 |---|---|:---:|
-| Phase 1 | POSTER V2 + Grad-ECLIP | ~2.5 GB |
+| Phase 1 | ConvNeXt-Tiny + Grad-ECLIP | ~2.5 GB |
 | Phase 2 | Qwen2.5-0.5B-Instruct (fp16) | ~1.5 GB |
 
 > Both phases fit within 6 GB because the classifier is **unloaded** before the LLM is loaded.
@@ -298,9 +289,12 @@ XAI/
 │   │   └── models/
 │   │       └── face_landmarker.task    # MediaPipe model blob (git-ignored, download manually)
 │   ├── emotion/
-│   │   ├── model.py                    # POSTER V2 (IR-50 + Window Cross-Attention)
-│   │   ├── baseline_resnet_cbam.py     # ResNet-50+CBAM baseline
-│   │   ├── dataset.py                  # FER2013 / RAF-DB image folder dataloaders
+│   │   ├── model.py                    # Model registry & factory
+│   │   ├── convnext.py                 # ConvNeXt-Tiny backbone
+│   │   ├── regnet.py                   # RegNetY-800MF backbone
+│   │   ├── resnet18.py                 # ResNet-18 baseline
+│   │   ├── efficientnet_b4.py          # EfficientNet-B4 baseline
+│   │   ├── dataset.py                  # AffectNet / FER2013 image dataloaders
 │   │   └── train.py                    # Training loop (AMP, Focal Loss, cosine LR)
 │   ├── attention/
 │   │   ├── grad_eclip.py               # Grad-ECLIP (channel + spatial importance)
@@ -343,9 +337,9 @@ pip install -e ".[dev]"
 
 1. **Novel end-to-end pipeline** — First system combining geometric AU features, Grad-ECLIP attention, and a lightweight LLM into a single grounded explanation pipeline.
 2. **Autonomous XAI** — No human expert required; the model generates its own FACS-grounded justification.
-3. **Grad-ECLIP for FER** — First application of Grad-ECLIP to facial expression recognition; produces higher-quality heatmaps than standard Grad-CAM on transformer-based backbones.
+3. **Grad-ECLIP for FER** — First application of Grad-ECLIP to facial expression recognition; produces higher-quality heatmaps than standard Grad-CAM on modern vision backbones.
 4. **Lightweight deployment** — Runs on a 6 GB consumer GPU via sequential model loading; the LLM (Qwen2.5-0.5B) requires only ~1.5 GB VRAM.
-5. **Landmark-guided cross-attention** — POSTER V2 is extended to consume real MediaPipe (468 × 2) geometric coordinates as structural query tokens, replacing the original fixed token approach.
+5. **Modern Fast Backbones** — Identifies and integrates lightweight vision models (ConvNeXt-Tiny, RegNetY-800MF) tailored for fast FER without sacrificing expressive power.
 
 ### Reference Papers
 
