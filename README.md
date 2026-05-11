@@ -246,30 +246,30 @@ Step 9  →  Visualization: landmark overlay + heatmap overlay + combined XAI pa
 
 | Model | Val Accuracy (Best) | Status |
 |---|:---:|---|
-| **ConvNeXt-Tiny** | *Training...* | New Primary Model (82.5% ImageNet) |
-| **RegNetY-800MF** | *Training...* | Fast Baseline (76.4% ImageNet) |
-| ResNet-18 | 71.90% | SOTA Baseline |
+| **ConvNeXt-Tiny** | **74.06%** | ✅ NEW BEST — beats all baselines |
+| **RegNetY-800MF** | **72.74%** | ✅ Beats ResNet-18 & EfficientNet-B4 |
+| ResNet-18 | 71.90% | Strong Baseline |
 | EfficientNet-b4 | 71.58% | Strong Baseline |
 
-> Results obtained on the AffectNet-8 test split (stratified 10%). Training included Class-Weighted Focal Loss, Cosine Annealing, and strong data augmentations (RandAugment).
+> Results obtained on the AffectNet-8 validation split (stratified 10%). Training used Class-Weighted Focal Loss, AdamW optimizer, and Cosine Annealing with 5-epoch warmup.
 
 ### Training Progress Summary
 
-| Model | Epochs | Train Acc | Val Acc (Best) |
-|---|:---:|:---:|:---:|
-| ConvNeXt-Tiny | - | - | *Pending* |
-| RegNetY-800MF | - | - | *Pending* |
-| ResNet-18 | 21 | 91.8% | **71.90%** |
-| EfficientNet-b4 | 22 | 90.1% | **71.58%** |
+| Model | Best Epoch | Train Acc @ Best | Val Acc (Best) | Training Time |
+|---|:---:|:---:|:---:|:---:|
+| **ConvNeXt-Tiny** | **7** | **76.3%** | **74.06%** | **~1.2h** |
+| **RegNetY-800MF** | **8** | **72.4%** | **72.74%** | **~0.7h** |
+| ResNet-18 | 21 | 91.8% | 71.90% | ~3h |
+| EfficientNet-b4 | 22 | 90.1% | 71.58% | ~5h |
 
-### VRAM Budget (RTX 4050 6 GB)
+### VRAM Budget (RTX 4070 Laptop 8 GB)
 
 | Phase | Component | Peak VRAM |
 |---|---|:---:|
 | Phase 1 | ConvNeXt-Tiny + Grad-ECLIP | ~2.5 GB |
 | Phase 2 | Qwen2.5-0.5B-Instruct (fp16) | ~1.5 GB |
 
-> Both phases fit within 6 GB because the classifier is **unloaded** before the LLM is loaded.
+> Both phases fit comfortably within 8 GB because the classifier is **unloaded** before the LLM is loaded.
 
 ---
 
