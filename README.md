@@ -65,8 +65,9 @@ MediaPipe FaceLandmarker  (Tasks SDK — face_landmarker.task)
 | Face detection | MediaPipe Tasks SDK `FaceLandmarker` | `.task` blob required (see Setup) |
 | Landmark extraction | 468 normalized (x, y, z) landmarks | Truncated from 478 if irises detected |
 | AU extraction | Geometric distances → FACS thresholds | Calibrated on FER2013 |
-| Emotion classifier | **POSTER V2** (IR-50 + Window Cross-Attention) | 7-class FER2013 labels |
-| Baseline classifier | ResNet-50 + CBAM | For ablation comparison |
+| **Primary Dataset** | **AffectNet (8 classes)** | Stratified 80/10/10 split |
+| Emotion classifier | **POSTER V2** (IR-50 + Window Cross-Attention) | Landmark-guided queries |
+| Baseline classifiers | **ResNet-18**, **EfficientNet-b4** | Standard vision backbones |
 | Attention map | **Grad-ECLIP** (custom) or Standard Grad-CAM | Grad-ECLIP is primary |
 | Region parser | Heatmap → 11 semantic facial regions | Threshold: top 30% intensity |
 | Explanation LLM | **Qwen/Qwen2.5-0.5B-Instruct** | Text-only; no quantization needed |
@@ -121,37 +122,29 @@ curl -L https://storage.googleapis.com/mediapipe-models/face_landmarker/face_lan
 
 ## 📦 Dataset Setup
 
-### FER2013 (Primary Training Dataset)
+### AffectNet (Primary Training Dataset)
 
-The training script expects an **image folder** structure (not the raw CSV):
+The project uses a stratified 80/10/10 split on AffectNet-8. The directory structure should look like this:
 
+```
+dataset_cropped/
+├── anger/
+├── contempt/
+├── disgust/
+├── fear/
+├── happy/
+├── neutral/
+├── sad/
+└── surprise/
+```
+
+### FER2013 (Secondary / Legacy)
+The training script also supports FER2013:
 ```
 data/FER/
 ├── train/
-│   ├── angry/
-│   ├── disgust/
-│   ├── fear/
-│   ├── happy/
-│   ├── sad/
-│   ├── surprise/
-│   └── neutral/
 └── test/
-    ├── angry/
-    └── ...
 ```
-
-**Option 1 — Kaggle CLI:**
-```bash
-uv run kaggle datasets download -d msambare/fer2013
-unzip fer2013.zip -d data/FER/
-```
-
-**Option 2 — Manual download:**  
-Visit [kaggle.com/datasets/msambare/fer2013](https://www.kaggle.com/datasets/msambare/fer2013) and place the extracted image folders in `data/FER/`.
-
-### RAF-DB (Optional)
-
-Download from [the RAF-DB project page](http://www.whdeng.cn/RAF/model1.html) and place in `data/RAF-DB/`.
 
 ---
 
@@ -222,23 +215,23 @@ uv run python scripts/extract_landmarks.py --image path/to/face.jpg
 # Full pipeline: face detection → emotion → attention → Qwen explanation
 uv run python scripts/demo.py --image path/to/face.jpg
 
-# Skip the LLM (faster — classification + attention map only)
-uv run python scripts/demo.py --image path/to/face.jpg --no-explanation
-
-# Use a trained checkpoint and a specific attention method
-uv run python scripts/demo.py \
-    --image path/to/face.jpg \
-    --checkpoint checkpoints/poster_v2_best.pth \
-    --attention grad_eclip
-
-# Use the baseline classifier instead
-uv run python scripts/demo.py \
-    --image path/to/face.jpg \
-    --model resnet50_cbam \
-    --checkpoint checkpoints/resnet50_cbam_best.pth
+# Use the best baseline (ResNet-18)
+uv run python scripts/demo.py --image path/to/face.jpg --model resnet18
 ```
 
-All output files (JSON result, face crop, XAI panel PNG) are saved under `outputs/<image_name>/`.
+### 5. Batch Utilities
+
+**Run XAI tests across all 8 classes:**
+```bash
+uv run python scripts/batch_demo.py --data-path dataset_cropped --num-per-class 1
+```
+
+**Evaluate an unlabelled folder of images:**
+```bash
+uv run python scripts/eval_test_folder.py --data-path Test --output-dir outputs
+```
+
+All output files (JSON result, face crop, XAI panel PNG) are saved under `outputs/<model_name>/`.
 
 ---
 
@@ -260,38 +253,23 @@ Step 9  →  Visualization: landmark overlay + heatmap overlay + combined XAI pa
 
 ## 📊 Results
 
-### Emotion Classification Accuracy
+### Emotion Classification Accuracy (AffectNet-8)
 
-| Model | FER2013 (Test) | RAF-DB |
-|---|:---:|:---:|
-| Aly et al. (ResNet-50+CBAM, 2023) | 73.43% | 87.62% |
-| ResNet-50+CBAM *(ours, reproduced)* | TBD | TBD |
-| **POSTER V2 *(ours, 46 epochs)*** | **62.44%** | TBD |
+| Model | Val Accuracy (Best) | Status |
+|---|:---:|---|
+| POSTER V2 (rep) | 62.45% | Training bottlenecked |
+| **EfficientNet-b4** | **71.58%** | Strong Baseline |
+| **ResNet-18** | **71.90%** | **SOTA for this pipeline** |
 
-> FER2013 test split (7,178 images). Training ran for 46 epochs with Class-Weighted Focal Loss, AMP, and cosine LR schedule. Best validation accuracy reached **62.45%** at epoch 36.
+> Results obtained on the AffectNet-8 test split (stratified 10%). Training included Class-Weighted Focal Loss and Cosine Annealing.
 
-### Per-Class Performance — POSTER V2 on FER2013 Test Set
+### Training Progress Summary
 
-| Emotion | Precision | Recall | F1-Score | Support |
-|---|:---:|:---:|:---:|:---:|
-| Angry | 56.4% | 47.1% | 51.3% | 958 |
-| Disgust | 37.8% | 64.0% | 47.5% | 111 |
-| Fear | 47.4% | 35.2% | 40.4% | 1,024 |
-| **Happy** | **86.8%** | **81.7%** | **84.2%** | 1,774 |
-| Sad | 49.5% | 56.4% | 52.7% | 1,247 |
-| **Surprise** | **67.0%** | **81.9%** | **73.7%** | 831 |
-| Neutral | 57.8% | 62.1% | 59.9% | 1,233 |
-| **Weighted Avg** | **62.6%** | **62.4%** | **62.1%** | **7,178** |
-
-> **Notes:** Happy and Surprise are the strongest classes due to clear geometric AU signals. Disgust (n=111) and Fear suffer from extreme class imbalance despite Focal Loss weighting — a known FER2013 challenge. Training without a pre-trained IR-50 backbone (trained from scratch) is the primary bottleneck; loading ArcFace weights would likely push accuracy toward 67–70%.
-
-### Training Curve Summary
-
-| Phase | Epochs | Train Acc | Val Acc |
+| Model | Epochs | Train Acc | Val Acc (Best) |
 |---|:---:|:---:|:---:|
-| Warmup (cosine ramp) | 1–5 | 13% → 37% | 19% → 36% |
-| Main training | 6–36 | 41% → 62% | 43% → **62.45%** ← best |
-| Late convergence | 37–46 | 67% → 70% | 59% → 59% (slight overfit) |
+| POSTER V2 | 46 | 70% | 62.45% |
+| ResNet-18 | 21 | 91.8% | **71.90%** |
+| EfficientNet-b4 | 22 | 90.1% | **71.58%** |
 
 ### VRAM Budget (RTX 4050 6 GB)
 
