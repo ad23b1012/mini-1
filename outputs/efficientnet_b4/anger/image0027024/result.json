@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\anger\\image0027024.jpg",
+  "processing_time": 13.98,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.356,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.356
+      },
+      {
+        "label": "anger",
+        "confidence": 0.2263
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.1394
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3624)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4826)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3443)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4548)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.3016)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2572)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0294)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4743)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_eye",
+      "mouth"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.68)\n- Moderate attention on right eye region (intensity: 0.50)\n- Moderate attention on mouth and lip region (intensity: 0.46)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, drooping lips, and inwardly looking eyes. The moderate attention regions on the face indicate that these features are present but not dominant enough to confidently classify the emotion. The combination of these features with the expected FACS features (inner eyebrows raised, lip corners pulled down) supports the prediction of sadness.",
+  "visualizations": {}
+}

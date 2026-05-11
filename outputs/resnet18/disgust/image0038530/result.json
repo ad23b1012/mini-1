@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\disgust\\image0038530.jpg",
+  "processing_time": 10.95,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.4078,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.4078
+      },
+      {
+        "label": "anger",
+        "confidence": 0.3485
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0976
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2601)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4702)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2865)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4019)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1019)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1422)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0128)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4574)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "right_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.83)\n- Strong attention on mouth and lip region (intensity: 0.77)\n- Moderate attention on right cheek area (intensity: 0.61)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, drooping lips, and inwardly looking eyes. The strong attention on the nose area indicates that the person is experiencing emotional distress, which aligns well with the predicted emotion. The moderate attention on the right cheek area suggests a more complex emotional state, but the overall pattern strongly supports the prediction of sadness. The presence of the FAU for \"inner eyebrows raised\" further reinforces the idea of sadness, as it indicates a deeper emotional state rather than just outward expressions. The combination of these features and the moderate attention on the right cheek area provides strong support for the diagnosis of sadness.",
+  "visualizations": {}
+}

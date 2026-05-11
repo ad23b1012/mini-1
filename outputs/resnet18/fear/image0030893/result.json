@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\fear\\image0030893.jpg",
+  "processing_time": 9.33,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.9311,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.9311
+      },
+      {
+        "label": "anger",
+        "confidence": 0.027
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0162
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1615)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4518)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2930)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7429)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1456)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.6030)\n- AU25 (Lips Part): lips parted (strength: 0.8106)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5964)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "left_eyebrow"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.78)\n- Strong attention on left eye region (intensity: 0.73)\n- Moderate attention on left eyebrow region (intensity: 0.60)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits strong features indicative of fear such as raised inner eyebrows, widened eyes, and a frowning expression. The model's attention regions strongly focus on the nose area, left eye region, and left eyebrow region, which are all associated with fear. The moderate attention on the left jaw region supports this conclusion. The presence of the \"Lip Corner Depressor\" indicates a frowning expression, which is characteristic of fear. The overall appearance of the face, including the upright posture and the outward tilt of the mouth, also suggests a fearful state. The combination of these features and the model's prediction aligns well with the expected emotion, making it highly probable that the face shows \"f",
+  "visualizations": {}
+}

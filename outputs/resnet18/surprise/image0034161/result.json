@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\surprise\\image0034161.jpg",
+  "processing_time": 11.13,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.6028,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.6028
+      },
+      {
+        "label": "fear",
+        "confidence": 0.1121
+      },
+      {
+        "label": "anger",
+        "confidence": 0.106
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2684)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4607)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3094)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5821)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1441)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2523)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0043)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5074)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "mouth"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.82)\n- Strong attention on left eye region (intensity: 0.72)\n- Moderate attention on mouth and lip region (intensity: 0.67)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, frowning, and drooping lips. The strong attention on the nose area and the moderate attention on the left eye region support this conclusion. The top alternative prediction of \"anger\" is also supported by the presence of angry FAUs, which include expressions like frowning and widened eyes. The lack of any other significant FAU that could indicate anger further supports the diagnosis of sadness. The confident score of 60.3% indicates high accuracy in identifying the emotion, which aligns well with the observed facial features and FAU patterns.",
+  "visualizations": {}
+}

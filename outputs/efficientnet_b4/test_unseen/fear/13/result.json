@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\13.png",
+  "processing_time": 9.74,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.654,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.654
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.2189
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0859
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2722)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5080)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3665)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.6964)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.3975)\n- AU25 (Lips Part): lips parted (strength: 0.4170)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5687)"
+  },
+  "attention": {
+    "regions": [
+      "left_eyebrow",
+      "right_eyebrow",
+      "right_eye"
+    ],
+    "summary": "- Mild attention on left eyebrow region (intensity: 0.39)\n- Mild attention on right eyebrow region (intensity: 0.37)\n- Mild attention on right eye region (intensity: 0.34)"
+  },
+  "explanation": "The predicted emotion is likely fear due to several key facial features and their corresponding actions:\n\n1. **Inner Eyebrows Raised**: This action typically conveys fear because it indicates alertness and concern.\n2. **Lips Partly Open**: The act of opening one's mouth often signals fear or anxiety.\n3. **Mouth Open / Jaw Dropped**: These actions can be interpreted as fear when the person is reacting to something unpleasant or scary.\n\nGiven that the model has identified these features correctly, we can confidently conclude that the predicted emotion is indeed fear. The combination of these facial expressions and subtle body language points towards a fearful state.",
+  "visualizations": {}
+}

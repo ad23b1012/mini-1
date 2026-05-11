@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\disgust\\image0038530.jpg",
+  "processing_time": 12.24,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5127,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5127
+      },
+      {
+        "label": "anger",
+        "confidence": 0.3103
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0561
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2601)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4702)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2865)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4019)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1019)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1422)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0128)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4574)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_cheek",
+      "mouth"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.56)\n- Mild attention on right cheek area (intensity: 0.38)\n- Mild attention on mouth and lip region (intensity: 0.31)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and potential distress.\n2. **Lowered Outer Brows**: Similar to raising them, it suggests discomfort or unease.\n3. **Raised Lips**: The act of opening one's mouth often precedes expressions of disgust.\n4. **Pulled Lip Corners Down**: This action can be interpreted as a sign of disgust due to its association with disgust-inducing stimuli like food or alcohol.\n\nThe moderate attention on the nose area and mild attention on the right cheek area further supports the disgust prediction by indicating that the face is reacting to potentially unpleasant stimuli. The presence of the lip corners pulled down",
+  "visualizations": {}
+}

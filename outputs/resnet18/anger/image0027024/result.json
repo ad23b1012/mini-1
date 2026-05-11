@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\anger\\image0027024.jpg",
+  "processing_time": 12.88,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.5297,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.5297
+      },
+      {
+        "label": "anger",
+        "confidence": 0.3122
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.0897
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3624)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4826)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3443)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4548)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.3016)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2572)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0294)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4743)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "left_eye"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.82)\n- Moderate attention on mouth and lip region (intensity: 0.62)\n- Moderate attention on left eye region (intensity: 0.57)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, drooping lips, and inwardly looking eyes. The strong attention on the nose area indicates that the person is experiencing emotional distress, which aligns well with the expected sadness feature. The moderate attention on the mouth and lip region supports the idea of a frowning expression, further confirming the prediction of sadness. The presence of chin raising and wrinkling also contributes to the overall impression of sadness. The combination of these features and the moderate attention on the left eye region provides strong support for the diagnosis of sadness.",
+  "visualizations": {}
+}

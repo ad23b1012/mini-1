@@ -1,0 +1,46 @@
+{
+  "image_path": "Test\\9.png",
+  "processing_time": 7.73,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.693,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.693
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1416
+      },
+      {
+        "label": "sad",
+        "confidence": 0.116
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2489)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4619)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3288)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7696)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0539)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.4876)\n- AU25 (Lips Part): lips parted (strength: 0.6070)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.8979)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "right_eye"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.86)\n- Strong attention on left eye region (intensity: 0.72)\n- Moderate attention on right eye region (intensity: 0.65)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits strong features indicative of fear such as raised inner eyebrows, widened eyes, and a frowning expression. The model's attention regions strongly focus on the nose area and the left eye, which are crucial for recognizing emotions like fear. The presence of the \"Lip Corner Puller\" AU further supports this prediction by showing asymmetrical lip movements typical of fear. The moderate attention on the right eye suggests that the model may be more confident in its interpretation of the face, but the overall pattern of features points towards a fear response. The combination of these factors\u2014strong facial expressions, focused attention, and consistent feature patterns\u2014indicates that the face most likely expresses fear.",
+  "visualizations": {}
+}

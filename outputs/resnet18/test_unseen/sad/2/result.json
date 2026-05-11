@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\2.png",
+  "processing_time": 8.56,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.6966,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.6966
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.2031
+      },
+      {
+        "label": "fear",
+        "confidence": 0.088
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3372)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5241)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1697)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1328)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0993)\n- AU25 (Lips Part): lips parted (strength: 0.3071)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4262)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.81)\n- Strong attention on mouth and lip region (intensity: 0.74)\n- Moderate attention on left cheek area (intensity: 0.56)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAU) detected show signs of sadness such as raised eyebrows, drooping lips, and inwardly looking eyes. The strong attention on the nose area indicates that the person is experiencing negative emotions, which aligns well with the predicted emotion of sadness. The moderate attention on the left cheek area supports the idea of emotional distress, further confirming the prediction. The presence of the \"dimple\" feature in the lip corner pullers also suggests a sense of sadness, as it implies a downturn in the smile. This combination of facial expressions and attentional patterns strongly support the diagnosis of sadness.",
+  "visualizations": {}
+}

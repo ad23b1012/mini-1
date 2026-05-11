@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\13.png",
+  "processing_time": 7.11,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.8174,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.8174
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1545
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0107
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2722)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5080)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3665)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.6964)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.3975)\n- AU25 (Lips Part): lips parted (strength: 0.4170)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5687)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "left_eyebrow"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.87)\n- Strong attention on left eye region (intensity: 0.84)\n- Strong attention on left eyebrow region (intensity: 0.71)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits strong features indicative of fear, such as raised inner eyebrows, widened eyes, and a frowning expression. The model's attention regions strongly point towards the nose area, indicating heightened focus on this region. This alignment supports the prediction that the face is expressing fear. The presence of the \"mouth open\" feature also suggests openness and readiness for action, which are common signs of fear. The combination of these features and the high confidence score further confirms that the predicted emotion is indeed \"fear.\"",
+  "visualizations": {}
+}

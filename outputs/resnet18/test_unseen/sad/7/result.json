@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\7.png",
+  "processing_time": 8.63,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.8935,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.8935
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0909
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0075
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0659)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4113)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5905)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.4339)\n- AU25 (Lips Part): lips parted (strength: 0.7800)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7070)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "mouth"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.85)\n- Strong attention on left eye region (intensity: 0.70)\n- Moderate attention on mouth and lip region (intensity: 0.66)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised inner eyebrows, furrowed eyebrows, and pulled-down lip corners. These features align well with the expected sadness patterns in the FACS dataset. The strong attention on the nose area and the moderate attention on the left eye region further support this prediction. The presence of the jaw drop indicates a relaxed state, which is consistent with the emotion of sadness. The absence of other emotional cues like anger or disgust also supports the classification of sadness. The confident score of 89.4% further confirms that the model has accurately predicted the emotion.",
+  "visualizations": {}
+}

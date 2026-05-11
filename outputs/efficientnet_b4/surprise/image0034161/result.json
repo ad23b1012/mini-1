@@ -1,0 +1,46 @@
+{
+  "image_path": "dataset_cropped\\surprise\\image0034161.jpg",
+  "processing_time": 11.36,
+  "face_found": true,
+  "emotion": {
+    "label": "anger",
+    "confidence": 0.577,
+    "top_predictions": [
+      {
+        "label": "anger",
+        "confidence": 0.577
+      },
+      {
+        "label": "sad",
+        "confidence": 0.1843
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0817
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2684)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4607)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3094)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5821)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1441)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2523)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0043)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5074)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose",
+      "left_eyebrow"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.50)\n- Moderate attention on nose area (intensity: 0.41)\n- Mild attention on left eyebrow region (intensity: 0.37)"
+  },
+  "explanation": "The predicted emotion of anger was correctly identified based on the observed facial features and model attention regions. The key features that indicate anger include:\n\n1. **Raised Inner Brows**: This indicates a strong emotional response.\n2. **Lips Pressed Together**: This action often conveys anger or frustration.\n3. **Smiling Expression**: The smile is a common expression associated with anger.\n\nThe model's attention regions were focused on the mouth and lip areas, which are crucial for understanding the emotions conveyed by these features. The moderate intensity of attention on both areas suggests that the model is interpreting these features accurately.\n\nGiven the high confidence score of 57.7%, it is reasonable to conclude that the model has successfully identified the emotion based on the provided",
+  "visualizations": {}
+}

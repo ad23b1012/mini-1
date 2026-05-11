@@ -1,0 +1,46 @@
+{
+  "image_path": "Test\\8.png",
+  "processing_time": 6.43,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.6348,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.6348
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.1172
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1137
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3312)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5694)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3209)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.3594)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2938)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2461)\n- AU25 (Lips Part): lips parted (strength: 0.3456)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3961)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "chin",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on mouth and lip region (intensity: 0.81)\n- Strong attention on chin area (intensity: 0.75)\n- Moderate attention on left cheek area (intensity: 0.66)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits strong features indicative of fear such as raised inner eyebrows, widened eyes, and a frowning expression. The model's attention regions strongly focus on the mouth and lip areas, which are crucial for conveying fear. The presence of asymmetrical lip movements (\"dimpler\") further supports the prediction of fear. The combination of these features and the moderate attention on the left cheek area aligns well with the expected emotions, making it highly probable that the face is showing \"fear.\"",
+  "visualizations": {}
+}

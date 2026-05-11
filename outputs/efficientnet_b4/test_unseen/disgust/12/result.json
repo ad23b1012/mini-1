@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\12.png",
+  "processing_time": 10.05,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5796,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5796
+      },
+      {
+        "label": "fear",
+        "confidence": 0.2432
+      },
+      {
+        "label": "sad",
+        "confidence": 0.1229
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0603)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2663)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7902)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.5171)\n- AU25 (Lips Part): lips parted (strength: 0.5823)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7710)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.47)\n- Mild attention on nose area (intensity: 0.36)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This action typically conveys anger or irritation.\n2. **Lip Corners Pulled Up**: This indicates displeasure or disgust.\n3. **Lowered Upper Lip**: This is often associated with disgust.\n4. **Lip Corners Pulled Down**: This further emphasizes the disgust level.\n\nThe model's attention regions are focused on the mouth and lip areas, which are crucial for understanding the emotional state. The moderate intensity of attention on these regions suggests that the model is paying close attention to these features, indicating a high likelihood of detecting disgust.\n\nGiven the combination of these features and the moderate attention, it",
+  "visualizations": {}
+}

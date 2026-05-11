@@ -1,0 +1,45 @@
+{
+  "image_path": "dataset_cropped\\sad\\image0028520.jpg",
+  "processing_time": 11.13,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.7176,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.7176
+      },
+      {
+        "label": "fear",
+        "confidence": 0.2286
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0189
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 0.8816)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1781)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4982)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2364)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.6087)\n- AU25 (Lips Part): lips parted (strength: 0.6219)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4400)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose",
+      "right_eye"
+    ],
+    "summary": "- Strong attention on mouth and lip region (intensity: 0.84)\n- Strong attention on nose area (intensity: 0.80)\n- Moderate attention on right eye region (intensity: 0.65)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, pursed lips, and drooping eyelids. The strong attention on the mouth and lip region indicates that these features are prominent and consistent with the emotional state being described. The moderate attention on the right eye region suggests a more complex emotional expression involving both positive and negative aspects, which aligns well with the concept of sadness. The presence of \"inner eyebrows raised\" and \"lip corners pulled up\" further supports the identification of sadness as the primary emotion. The combination of these features and the overall context of the face points towards a person experiencing sadness, making it the most likely prediction based on the evidence provided",
+  "visualizations": {}
+}

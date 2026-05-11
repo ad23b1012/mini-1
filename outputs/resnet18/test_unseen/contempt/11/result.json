@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\11.png",
+  "processing_time": 8.29,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.8975,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.8975
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0601
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0229
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1213)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1894)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8586)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0675)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0050)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.7044)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_cheek",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.79)\n- Strong attention on right cheek area (intensity: 0.77)\n- Moderate attention on left cheek area (intensity: 0.64)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of facial action units (FAU) that show a contorted look, particularly the upward tilt of the inner eyebrow and the outward opening of the upper lid. These features are consistent with the expected contorted expression when someone is feeling contemptuous. The strong attention on the nose and right cheek areas further supports this interpretation, indicating a more intense emotional state. The moderate attention on the left cheek area suggests a less intense but still noticeable expression. The presence of a slight head tilt and a lip pressor also contributes to the overall contorted appearance. Given the high confidence score of 89.8%, it is reasonable to conclude that the predicted emotion is indeed \"contempt.\"",
+  "visualizations": {}
+}

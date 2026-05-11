@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\10.png",
+  "processing_time": 7.11,
+  "face_found": true,
+  "emotion": {
+    "label": "anger",
+    "confidence": 0.7809,
+    "top_predictions": [
+      {
+        "label": "anger",
+        "confidence": 0.7809
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0657
+      },
+      {
+        "label": "neutral",
+        "confidence": 0.0405
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0209)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8374)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1059)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.6345)\n- AU25 (Lips Part): lips parted (strength: 1.3667)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 2.2720)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "mouth"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.80)\n- Strong attention on left eye region (intensity: 0.77)\n- Strong attention on mouth and lip region (intensity: 0.74)"
+  },
+  "explanation": "The predicted emotion of anger was correctly identified based on the observed facial features and model attention regions. The key features that support this prediction include:\n\n1. **Raised Inner Brows**: This indicates a strong emotional response, often associated with anger.\n2. **Lip Corners Raised**: This action typically conveys a sense of excitement or urgency, which is consistent with anger.\n3. **Smiling Expression**: The combination of raised brows and lip corners suggests a relaxed, friendly smile, which is characteristic of anger.\n4. **Asymmetric Lip Movement**: The asymmetrical nature of the lip movements further supports the emotion of anger, as it implies a more intense or aggressive state.\n\nThe model's attention regions also point towards the mouth and lip areas,",
+  "visualizations": {}
+}

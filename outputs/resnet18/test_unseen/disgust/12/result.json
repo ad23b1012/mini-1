@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\12.png",
+  "processing_time": 7.42,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5406,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5406
+      },
+      {
+        "label": "fear",
+        "confidence": 0.3052
+      },
+      {
+        "label": "sad",
+        "confidence": 0.1341
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0603)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2663)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7902)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.5171)\n- AU25 (Lips Part): lips parted (strength: 0.5823)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7710)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "right_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.84)\n- Strong attention on mouth and lip region (intensity: 0.81)\n- Moderate attention on right cheek area (intensity: 0.63)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits strong features indicative of disgust such as raised inner eyebrows, lip corners pulled up, and a frowning expression. The model's attention regions strongly focus on the nose area, which corresponds to the raised inner eyebrows, and the mouth and lip region, which corresponds to the lip corners pulled up. These features are consistent with the expected disgust facial expression. The moderate attention on the right cheek area further supports the disgust prediction. The combination of these features and the high confidence score indicates that the model correctly identified the emotion based on the observed facial features and model attention patterns.",
+  "visualizations": {}
+}

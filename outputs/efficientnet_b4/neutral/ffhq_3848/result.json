@@ -1,0 +1,45 @@
+{
+  "image_path": "dataset_cropped\\neutral\\ffhq_3848.png",
+  "processing_time": 8.96,
+  "face_found": true,
+  "emotion": {
+    "label": "neutral",
+    "confidence": 0.6844,
+    "top_predictions": [
+      {
+        "label": "neutral",
+        "confidence": 0.6844
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.0899
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0654
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1352)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4577)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1691)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0428)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2689)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0084)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5043)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "right_eye"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.61)\n- Moderate attention on left eye region (intensity: 0.51)\n- Mild attention on right eye region (intensity: 0.32)"
+  },
+  "explanation": "The predicted emotion is neutral because the face exhibits relaxed facial muscles, no prominent AU activations, and calm expression. The detected facial features include relaxed jaw drop, relaxed lips, and relaxed eye movements. These features are consistent with a neutral emotional state where there are no strong expressions or emotions being conveyed. The moderate attention on the nose area and mild attention on the left eye region further support this interpretation. The expected FACS features for this emotion are relaxed facial muscles, no prominent AU activations, and calm expression.",
+  "visualizations": {}
+}

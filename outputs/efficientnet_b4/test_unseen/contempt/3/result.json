@@ -1,0 +1,46 @@
+{
+  "image_path": "Test\\3.png",
+  "processing_time": 9.74,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.7116,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.7116
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0841
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0711
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3631)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5459)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3342)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4243)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1646)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1630)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0059)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3314)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_eye",
+      "right_eyebrow"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.65)\n- Moderate attention on right eye region (intensity: 0.54)\n- Mild attention on right eyebrow region (intensity: 0.34)"
+  },
+  "explanation": "The predicted emotion of \"contempt\" is supported by several key facial features and FACS analysis:\n\n1. **Detected Au1 (Inner Brow Raise)**: The raised inner eyebrows indicate a defensive posture, which is often associated with feelings of contempt.\n2. **Detected Au2 (Outer Brow Raise)**: The raised outer eyebrows also suggest a defensive stance, further reinforcing the contemptual tone.\n3. **Detected AU5 (Upper Lid Raise)**: Eyes wide open indicates a state of heightened alertness or hostility, consistent with contemptuous expressions.\n4. **Detected AU12 (Lip Corner Puller)**: Lip corners pulled up suggests a defensive gesture, which is characteristic of contempt.\n5. **Detected AU",
+  "visualizations": {}
+}

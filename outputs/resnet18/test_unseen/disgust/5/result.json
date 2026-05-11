@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\5.png",
+  "processing_time": 8.14,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5684,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5684
+      },
+      {
+        "label": "neutral",
+        "confidence": 0.1725
+      },
+      {
+        "label": "happy",
+        "confidence": 0.0706
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1744)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4138)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8917)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0866)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2765)\n- AU25 (Lips Part): lips parted (strength: 0.2458)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3752)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "left_eye"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.83)\n- Moderate attention on mouth and lip region (intensity: 0.68)\n- Moderate attention on left eye region (intensity: 0.61)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits strong features indicative of disgust such as raised inner eyebrows, lip corners pulled up, and asymmetrical lip movements. The model's attention regions strongly focus on the nose area, which corresponds to the raised inner eyebrows, and the mouth and lip region, which correlates with the lip corners pulled up and the asymmetrical lip movements. These features are consistent with the expected facial expressions associated with disgust. The moderate attention on the left eye region further supports the prediction that the face is displaying disgust. The combination of these features and the moderate attention on the left eye region aligns well with the predicted emotion, making it the most likely choice among the options provided.",
+  "visualizations": {}
+}

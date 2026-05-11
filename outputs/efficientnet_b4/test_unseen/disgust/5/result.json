@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\5.png",
+  "processing_time": 10.21,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.6883,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.6883
+      },
+      {
+        "label": "anger",
+        "confidence": 0.113
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.0811
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1744)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4138)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8917)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0866)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2765)\n- AU25 (Lips Part): lips parted (strength: 0.2458)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3752)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth"
+    ],
+    "summary": "- Mild attention on nose area (intensity: 0.38)\n- Mild attention on mouth and lip region (intensity: 0.35)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and fear.\n2. **Lip Corners Raised**: This is often associated with disgust due to its connotation of disgust.\n3. **Lip Corners Pulled Down**: This action suggests disgust, as it's typically used to express disgust.\n4. **Upper Lip Raised**: This is a common sign of disgust when the lower lip is lifted slightly.\n\nThe model's attention regions are focused on the nose area and the mouth/lip region, which are typical locations where disgust is expressed. The mild intensity of the attention also supports the prediction of disgust.\n\nGiven the combination of these features and",
+  "visualizations": {}
+}

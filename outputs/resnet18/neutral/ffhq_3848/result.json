@@ -1,0 +1,45 @@
+{
+  "image_path": "dataset_cropped\\neutral\\ffhq_3848.png",
+  "processing_time": 8.51,
+  "face_found": true,
+  "emotion": {
+    "label": "neutral",
+    "confidence": 0.8223,
+    "top_predictions": [
+      {
+        "label": "neutral",
+        "confidence": 0.8223
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.1002
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0198
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1352)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4577)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1691)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0428)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2689)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0084)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5043)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "mouth"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.79)\n- Moderate attention on left eye region (intensity: 0.57)\n- Moderate attention on mouth and lip region (intensity: 0.55)"
+  },
+  "explanation": "The predicted emotion is neutral because the face exhibits relaxed facial muscles, no prominent AU activations, and calm expression. The detected facial features include relaxed jaw drop, relaxed lips, and relaxed eye movements. These features are consistent with a neutral emotional state where there are no strong expressions or significant body language cues that would indicate disgust or contempt. The moderate attention on the left eye and mouth and lip regions further supports this interpretation, indicating a lack of heightened arousal or focus on any particular emotion. The expected FACS features for this emotion are relaxed facial muscles, no prominent AU activations, and calm expression.",
+  "visualizations": {}
+}

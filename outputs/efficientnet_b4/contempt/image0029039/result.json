@@ -1,0 +1,43 @@
+{
+  "image_path": "dataset_cropped\\contempt\\image0029039.jpg",
+  "processing_time": 11.46,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.4867,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.4867
+      },
+      {
+        "label": "anger",
+        "confidence": 0.2838
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.1577
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2384)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4672)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2943)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4258)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0183)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.6591)"
+  },
+  "attention": {
+    "regions": [
+      "chin",
+      "mouth"
+    ],
+    "summary": "- Moderate attention on chin area (intensity: 0.57)\n- Mild attention on mouth and lip region (intensity: 0.37)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of the detected facial action units (AU) and the model's attention regions. The detected AU1 (inner brow raise), AU2 (outer brow raise), AU5 (upper lid raise), AU12 (lip corner puller), and AU24 (lip pressor) all contribute to the appearance of a contorted face with averted eyes, widened mouth, and a slightly depressed jawline. These features are consistent with the expected contorted face associated with contempt. The moderate attention on the chin area supports this interpretation, indicating that the face is not smiling but rather showing a more aggressive or angry expression. The mild attention on the mouth and lip region further supports the idea of a contorted face",
+  "visualizations": {}
+}

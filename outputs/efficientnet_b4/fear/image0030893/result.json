@@ -1,0 +1,44 @@
+{
+  "image_path": "dataset_cropped\\fear\\image0030893.jpg",
+  "processing_time": 11.29,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.7272,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.7272
+      },
+      {
+        "label": "sad",
+        "confidence": 0.1091
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0577
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1615)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4518)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2930)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7429)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1456)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.6030)\n- AU25 (Lips Part): lips parted (strength: 0.8106)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5964)"
+  },
+  "attention": {
+    "regions": [
+      "right_eyebrow"
+    ],
+    "summary": "- Moderate attention on right eyebrow region (intensity: 0.40)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits several key facial actions that are characteristic of the emotion:\n\n1. **Raised Inner Eyebrows**: This indicates arousal and potential distress.\n2. **Wide Eyes Open**: The eyes are widely opened, which can be interpreted as fear due to heightened awareness and anxiety.\n3. **Mouth Open**: The mouth is slightly open, often associated with fear when the person feels threatened or scared.\n4. **Jaw Dropped**: The jaw is drooped, another sign of fear.\n\nThese features are consistent with the expected facial expressions for fear, where the eyes widen, the mouth opens, and the face appears relaxed but potentially agitated. The moderate level of attention on the right eyebrow",
+  "visualizations": {}
+}

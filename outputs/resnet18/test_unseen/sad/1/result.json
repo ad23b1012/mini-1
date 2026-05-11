@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\1.png",
+  "processing_time": 6.62,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.8567,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.8567
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0993
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0176
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1762)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5058)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8673)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1480)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.0587)\n- AU25 (Lips Part): lips parted (strength: 0.2810)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.0577)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.83)\n- Strong attention on mouth and lip region (intensity: 0.74)\n- Moderate attention on left cheek area (intensity: 0.60)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised inner eyebrows, pulled-up lip corners, and drooping jaw. These features align well with the expected sadness profile based on the FACS features. The strong attention on the nose area and mouth/lip region also supports this interpretation, indicating that the face is expressing sadness through outward expressions rather than internal emotional states. The moderate attention on the left cheek area further reinforces the idea that the face is showing sadness due to external factors like stress or discomfort. This combination of facial features and attentional patterns strongly suggests that the observed emotion is indeed \"sad.\"",
+  "visualizations": {}
+}
