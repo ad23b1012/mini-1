@@ -1,0 +1,37 @@
+{
+  "image_path": "Test\\16.jpeg",
+  "processing_time": 8.38,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.8263,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.8263
+      },
+      {
+        "label": "sad",
+        "confidence": 0.055
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0338
+      }
+    ]
+  },
+  "action_units": {
+    "active": [],
+    "descriptions": "- No landmark data available (face detection skipped)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "left_eyebrow"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.55)\n- Moderate attention on left eye region (intensity: 0.55)\n- Moderate attention on left eyebrow region (intensity: 0.44)"
+  },
+  "explanation": "The predicted emotion of \"surprise\" was correctly identified based on the observed facial features and model attention regions. The raised inner eyebrows, widened eyes, and drooping mouth indicate a strong emotional response, which aligns well with the expected facial expressions associated with surprise. The moderate attention on the nose and left eye areas further supports this interpretation, suggesting that the face is responding to a sudden or unexpected event. The moderate attention on the left eyebrow indicates a more focused gaze, consistent with the typical expression of surprise. This combination of facial features and model attention provides strong support for the prediction of \"surprise.\"",
+  "visualizations": {}
+}

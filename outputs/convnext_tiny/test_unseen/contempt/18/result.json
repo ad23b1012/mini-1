@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\18.jpeg",
+  "processing_time": 7.88,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.8659,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.8659
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.055
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0235
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1423)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2564)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1050)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0438)\n- AU25 (Lips Part): lips parted (strength: 0.2915)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4940)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.50)\n- Moderate attention on nose area (intensity: 0.49)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of the detected facial action units (AU) and the model's attention regions. The detected AU1 (inner brow raise), AU5 (upper lid raise), AU12 (lip corner puller), AU14 (dimple), and AU25 (lips part) all contribute to the overall expression of contempt. \n\nThe model's moderate attention on the mouth and lip region indicates that the face is engaged in a social interaction where the speaker is expressing displeasure or frustration. The asymmetrical smile and one-sided dimple further reinforce the contemptuous tone. The slight head tilt and lips being slightly pressed also suggest a defensive posture, which is characteristic of contempt.\n\nGiven the high confidence score of",
+  "visualizations": {}
+}

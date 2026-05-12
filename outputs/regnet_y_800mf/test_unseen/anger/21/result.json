@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\21.jpeg",
+  "processing_time": 8.58,
+  "face_found": true,
+  "emotion": {
+    "label": "anger",
+    "confidence": 0.4053,
+    "top_predictions": [
+      {
+        "label": "anger",
+        "confidence": 0.4053
+      },
+      {
+        "label": "sad",
+        "confidence": 0.3483
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.1134
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2071)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4245)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2717)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5518)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0479)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1810)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0116)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.1555)"
+  },
+  "attention": {
+    "regions": [
+      "mouth"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.50)"
+  },
+  "explanation": "The predicted emotion of anger was correctly identified based on the observed facial features and model attention regions. The key features that indicate anger include:\n\n1. **Raised Inner Brows**: This indicates a strong emotional response.\n2. **Lips Pressed Together**: This action often conveys anger or frustration.\n3. **Lips Tightened**: This further emphasizes the intensity of the emotion.\n4. **Eye Openness**: Eyes widening can be indicative of heightened awareness or excitement.\n\nGiven these features, the model's prediction of anger has high confidence at 40.5%. The moderate attention on the mouth and lip region supports this conclusion, indicating that the model is paying close attention to these areas during its analysis. The presence of the jaw drop feature",
+  "visualizations": {}
+}

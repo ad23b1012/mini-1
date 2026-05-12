@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\19.jpeg",
+  "processing_time": 7.64,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.7041,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.7041
+      },
+      {
+        "label": "happy",
+        "confidence": 0.0731
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0731
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1522)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2295)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.0368)\n- AU25 (Lips Part): lips parted (strength: 0.3144)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5384)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "right_eye"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.86)\n- Moderate attention on left eye region (intensity: 0.63)\n- Moderate attention on right eye region (intensity: 0.60)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of facial action units (FAU) detected and the model's attention regions. The FAU detected includes AU1 (inner brow raise), AU5 (upper lid raise), AU12 (lip corner puller), AU25 (lips part), and AU26 (jaw drop). These features correspond to the expected facial expressions for contempt:\n\n- **AU1 (Inner Brow Raise)**: This indicates a strong expression of contempt.\n- **AU5 (Upper Lid Raise)**: This suggests a more aggressive or angry expression.\n- **AU12 (Lip Corner Puller)**: This indicates a relaxed or playful expression.\n- **AU25 (Lips Part)**: This could",
+  "visualizations": {}
+}

@@ -1,6 +1,6 @@
 {
   "image_path": "Test\\4.png",
-  "processing_time": 8.38,
+  "processing_time": 8.65,
   "face_found": true,
   "emotion": {
     "label": "anger",

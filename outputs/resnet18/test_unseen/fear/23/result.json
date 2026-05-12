@@ -1,0 +1,46 @@
+{
+  "image_path": "Test\\23.jpeg",
+  "processing_time": 8.92,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.9176,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.9176
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0603
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0074
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2876)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4081)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3948)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.0155)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0482)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.3316)\n- AU25 (Lips Part): lips parted (strength: 0.6409)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.6336)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.87)\n- Strong attention on left eye region (intensity: 0.80)\n- Moderate attention on left cheek area (intensity: 0.65)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits strong features indicative of fear such as raised inner eyebrows, widened eyes, and a frowning expression. The model's attention regions strongly focus on the nose area, left eye region, and left cheek area, which are all associated with the facial muscles responsible for these emotions. The presence of the \"lip corner depressor\" and \"lip corner puller\" suggests a relaxed state, while the \"mouth open\" and \"jaw dropped\" indicate a defensive posture. These features align well with the expected facial expressions for \"fear,\" making it highly probable that the model correctly identified this emotion based on the observed facial features and model attention patterns.",
+  "visualizations": {}
+}

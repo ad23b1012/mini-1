@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\22.jpeg",
+  "processing_time": 9.56,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.9779,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.9779
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0087
+      },
+      {
+        "label": "neutral",
+        "confidence": 0.0052
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.4306)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.6092)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.4504)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4898)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0694)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0140)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.8931)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_eye",
+      "right_eye"
+    ],
+    "summary": "- Strong attention on nose area (intensity: 0.90)\n- Strong attention on left eye region (intensity: 0.84)\n- Strong attention on right eye region (intensity: 0.72)"
+  },
+  "explanation": "The predicted emotion is likely \"surprise\" because the face exhibits strong expressions such as widened eyes, a smile-like appearance, and a mouth that is slightly open but not fully closed. The facial action units (AU) involved include:\n\n- **AU1 (Inner Brow Raise)**: Raised inner eyebrows.\n- **AU2 (Outer Brow Raise)**: Raised outer eyebrows.\n- **AU5 (Upper Lid Raise)**: Eyes wide open.\n- **AU12 (Lip Corner Puller)**: Lip corners pulled up.\n- **AU14 (Dimpler)**: Asymmetric lip movement (one-sided).\n- **AU24 (Lip Pressor)**: Lips pressed together.\n- **AU26 (Jaw",
+  "visualizations": {}
+}

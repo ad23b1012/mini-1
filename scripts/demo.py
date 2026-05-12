@@ -23,8 +23,9 @@ def main():
         help="Path to input face image",
     )
     parser.add_argument(
-        "--model", type=str, default="resnet18",
-        choices=["poster_v2", "resnet50_cbam", "resnet18", "efficientnet_b4"],
+        "--model", type=str, default="convnext_tiny",
+        choices=["poster_v2", "resnet50_cbam", "resnet18", "efficientnet_b4",
+                 "convnext_tiny", "regnet_y_800mf"],
         help="Classifier model",
     )
     parser.add_argument(
@@ -41,17 +42,31 @@ def main():
         help="Skip VLM explanation generation",
     )
     parser.add_argument(
+        "--no-crop", action="store_true",
+        help="Skip face detection — pass the full image directly to the model",
+    )
+    parser.add_argument(
         "--output-dir", type=str, default="outputs",
         help="Output directory",
     )
 
     args = parser.parse_args()
 
+    # Auto-detect checkpoint if not specified
+    if args.checkpoint is None:
+        auto_path = os.path.join("checkpoints", f"{args.model}_best.pth")
+        if os.path.exists(auto_path):
+            args.checkpoint = auto_path
+            print(f"[Auto] Found checkpoint: {auto_path}")
+        else:
+            print(f"[WARNING] No checkpoint found at {auto_path} — model will use untrained weights!")
+
     print(f"\n{'='*60}")
     print(f"  XAI Emotion Recognition — Demo")
     print(f"{'='*60}")
     print(f"  Image:      {args.image}")
     print(f"  Model:      {args.model}")
+    print(f"  Checkpoint: {args.checkpoint or 'NONE (untrained!)'}")
     print(f"  Attention:  {args.attention}")
     print(f"  VLM:        {'Disabled' if args.no_explanation else 'Qwen-0.5B'}")
     print(f"{'='*60}\n")
@@ -68,6 +83,7 @@ def main():
     result = pipeline.predict(
         image_path=args.image,
         generate_explanation=not args.no_explanation,
+        skip_face_detection=args.no_crop,
     )
 
     # Print results

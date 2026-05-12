@@ -1,0 +1,42 @@
+{
+  "image_path": "Test\\18.jpeg",
+  "processing_time": 7.11,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.7242,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.7242
+      },
+      {
+        "label": "anger",
+        "confidence": 0.1505
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0467
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1423)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2564)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1050)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0438)\n- AU25 (Lips Part): lips parted (strength: 0.2915)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4940)"
+  },
+  "attention": {
+    "regions": [
+      "mouth"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.56)"
+  },
+  "explanation": "The predicted emotion of \"contempt\" was correctly identified based on the observed facial features and model attention regions. The contorted jaw drop (mouth open), asymmetrical lip movement (lip corners pulled up), and one-sided dimple all align well with the expected features for contempt. The moderate level of attention on the mouth and lip region further supports this prediction. This combination of facial expressions and attentional patterns strongly indicate that the face is expressing contempt.",
+  "visualizations": {}
+}

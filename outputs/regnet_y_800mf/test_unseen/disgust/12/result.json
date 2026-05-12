@@ -1,0 +1,42 @@
+{
+  "image_path": "Test\\12.png",
+  "processing_time": 6.93,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.8091,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.8091
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0764
+      },
+      {
+        "label": "sad",
+        "confidence": 0.067
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0603)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2663)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.7902)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.5171)\n- AU25 (Lips Part): lips parted (strength: 0.5823)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7710)"
+  },
+  "attention": {
+    "regions": [
+      "mouth"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.59)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and potential distress.\n2. **Wide Eyes**: The eyes widen open, which can be interpreted as excitement or anger.\n3. **Lip Corners Raised**: The corners of the lips are drawn inward, often associated with disgust.\n4. **Smile**: The smile is a common expression of disgust, especially when there's no other obvious emotion present.\n\nThese features are consistent with the model predicting disgust with high confidence (80.9%). The moderate attention on the mouth and lip region supports this prediction by indicating engagement with the face. The top alternative prediction of sadness has a lower confidence score",
+  "visualizations": {}
+}

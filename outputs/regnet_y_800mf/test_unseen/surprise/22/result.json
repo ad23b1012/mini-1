@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\22.jpeg",
+  "processing_time": 7.08,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.6318,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.6318
+      },
+      {
+        "label": "neutral",
+        "confidence": 0.1956
+      },
+      {
+        "label": "fear",
+        "confidence": 0.062
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.4306)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.6092)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.4504)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4898)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0694)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0140)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.8931)"
+  },
+  "attention": {
+    "regions": [
+      "right_eye",
+      "left_eye",
+      "left_eyebrow"
+    ],
+    "summary": "- Moderate attention on right eye region (intensity: 0.50)\n- Mild attention on left eye region (intensity: 0.39)\n- Mild attention on left eyebrow region (intensity: 0.39)"
+  },
+  "explanation": "The predicted emotion of \"surprise\" was correctly identified based on the observed facial features and model attention regions. The key features that indicate surprise include:\n\n1. **Raised Inner Eyebrows**: This indicates excitement or interest.\n2. **Widened Eyes**: This suggests engagement or concern.\n3. **Open Mouth**: This is often associated with surprise or disbelief.\n\nThe model's attention regions show moderate intensity on the right eye, mild intensity on the left eye, and mild intensity on the left eyebrow. These areas are consistent with the expected facial expressions for surprise. The combination of these features and the moderate attention on the right eye region supports the prediction of surprise.",
+  "visualizations": {}
+}

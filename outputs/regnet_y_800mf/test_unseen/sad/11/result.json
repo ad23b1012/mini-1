@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\11.png",
+  "processing_time": 8.49,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.6074,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.6074
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.3162
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0275
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1213)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1894)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8586)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0675)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0050)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.7044)"
+  },
+  "attention": {
+    "regions": [
+      "left_eyebrow",
+      "left_eye",
+      "nose"
+    ],
+    "summary": "- Moderate attention on left eyebrow region (intensity: 0.54)\n- Moderate attention on left eye region (intensity: 0.44)\n- Mild attention on nose area (intensity: 0.32)"
+  },
+  "explanation": "The predicted emotion of sadness was correctly identified based on the observed facial features and model attention regions. The key features that support this prediction include:\n\n1. **Raised Inner Eyebrows**: This indicates a state of emotional distress or sadness.\n2. **Lip Corners Pulled Up**: This action often associated with feelings of sadness, such as when someone is crying or feeling overwhelmed.\n3. **Smiling Expression**: The presence of smile indicates happiness or amusement, which is typically associated with positive emotions rather than sadness.\n\nGiven the moderate level of attention on the left eyebrow region and the mild attention on the left eye region, it suggests that the model is paying more attention to the facial expressions related to sadness. The moderate intensity of attention on the nose",
+  "visualizations": {}
+}

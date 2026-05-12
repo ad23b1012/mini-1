@@ -1,6 +1,6 @@
 {
   "image_path": "Test\\3.png",
-  "processing_time": 9.74,
+  "processing_time": 9.82,
   "face_found": true,
   "emotion": {
     "label": "contempt",

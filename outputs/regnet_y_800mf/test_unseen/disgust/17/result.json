@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\17.jpeg",
+  "processing_time": 8.56,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5145,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5145
+      },
+      {
+        "label": "anger",
+        "confidence": 0.3888
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0433
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1685)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2225)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8362)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2022)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1939)\n- AU25 (Lips Part): lips parted (strength: 0.3136)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.2160)"
+  },
+  "attention": {
+    "regions": [
+      "left_cheek",
+      "left_eye",
+      "mouth"
+    ],
+    "summary": "- Moderate attention on left cheek area (intensity: 0.63)\n- Moderate attention on left eye region (intensity: 0.49)\n- Moderate attention on mouth and lip region (intensity: 0.41)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and potential aggression.\n2. **Lip Corners Raised**: The upward movement suggests discomfort or distress.\n3. **Lip Corners Pulled Down**: This action conveys a sense of frustration or displeasure.\n4. **Lowering Upper Lip**: This is often associated with disgust due to its association with disgust-inducing stimuli like food or alcohol.\n\nThe moderate attention on the left cheek area and the mouth and lip regions also support this prediction by indicating emotional engagement and possibly heightened awareness of bodily sensations related to disgust.\n\nGiven the high confidence score of 51.4%, it's reasonable",
+  "visualizations": {}
+}

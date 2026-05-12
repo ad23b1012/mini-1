@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\22.jpeg",
+  "processing_time": 8.51,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.6651,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.6651
+      },
+      {
+        "label": "fear",
+        "confidence": 0.2607
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.0269
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.4306)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.6092)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.4504)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4898)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0694)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0140)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 0.8931)"
+  },
+  "attention": {
+    "regions": [
+      "right_eyebrow",
+      "left_eyebrow",
+      "left_eye"
+    ],
+    "summary": "- Moderate attention on right eyebrow region (intensity: 0.48)\n- Moderate attention on left eyebrow region (intensity: 0.45)\n- Moderate attention on left eye region (intensity: 0.42)"
+  },
+  "explanation": "The predicted emotion is likely \"surprise\" because the face exhibits multiple key facial actions that are characteristic of surprise:\n\n1. **Raised Inner Eyebrows**: This action indicates excitement or anticipation.\n2. **Wide Open Eyes**: The eyes are widely opened, which can be interpreted as surprise or disbelief.\n3. **Mouth Open**: This action suggests openness and receptiveness, often associated with surprise.\n\nThe moderate attention on the right eyebrow region supports this interpretation, indicating that the person is paying close attention to the facial expressions around their eyes. The moderate attention on the left eye region further reinforces this observation, suggesting that the person is also paying close attention to the other eye area.\n\nGiven the high confidence score of 66.5%, it",
+  "visualizations": {}
+}

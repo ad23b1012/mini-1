@@ -1,6 +1,6 @@
 {
   "image_path": "Test\\13.png",
-  "processing_time": 9.74,
+  "processing_time": 8.46,
   "face_found": true,
   "emotion": {
     "label": "fear",

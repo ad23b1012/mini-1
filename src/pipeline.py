@@ -217,6 +217,7 @@ class XAIEmotionPipeline:
         image_path: str,
         generate_explanation: bool = True,
         save_output: bool = True,
+        skip_face_detection: bool = False,
     ) -> PredictionResult:
         """
         Run the full pipeline on a single image.
@@ -225,16 +226,38 @@ class XAIEmotionPipeline:
             image_path: Path to the input image.
             generate_explanation: Whether to generate VLM explanation.
             save_output: Whether to save results to disk.
+            skip_face_detection: If True, skip BlazeFace + landmark steps and
+                feed the full image directly to the classifier.
 
         Returns:
             PredictionResult with all pipeline outputs.
         """
+        import cv2  # local import — already a project dependency
         start_time = time.time()
         result = PredictionResult(image_path=image_path)
 
         # ===== STEP 1: Face Detection + Landmarks =====
-        print(f"\n[Step 1] Detecting face in {image_path}...")
-        face_result = self.face_detector.detect_from_path(image_path)
+        if skip_face_detection:
+            print(f"\n[Step 1] Skipping face detection — using full image as input.")
+            raw_bgr = cv2.imread(image_path)
+            if raw_bgr is None:
+                raise FileNotFoundError(f"Could not read image: {image_path}")
+            h, w = raw_bgr.shape[:2]
+            raw_rgb = cv2.cvtColor(raw_bgr, cv2.COLOR_BGR2RGB)
+            full_pil = Image.fromarray(raw_rgb)
+            # Build a minimal FaceDetectionResult that looks like a valid detection
+            face_result = FaceDetectionResult(
+                face_found=True,
+                landmarks=None,          # No landmarks → AU step will produce nothing
+                landmarks_pixel=None,
+                face_crop=raw_bgr,
+                face_crop_pil=full_pil,
+                bbox=(0, 0, w, h),
+                image_shape=(h, w),
+            )
+        else:
+            print(f"\n[Step 1] Detecting face in {image_path}...")
+            face_result = self.face_detector.detect_from_path(image_path)
 
         if not face_result.face_found:
             result.face_found = False
@@ -247,10 +270,15 @@ class XAIEmotionPipeline:
 
         # ===== STEP 2: AU Feature Extraction =====
         print("[Step 2] Extracting Action Unit features...")
-        au_result = self.au_extractor.extract(face_result.landmarks)
-        result.active_aus = au_result.active_aus
-        result.au_descriptions = self.au_extractor.format_for_prompt(au_result)
-        print(f"[Step 2] Active AUs: {au_result.active_aus}")
+        if face_result.landmarks is not None:
+            au_result = self.au_extractor.extract(face_result.landmarks)
+            result.active_aus = au_result.active_aus
+            result.au_descriptions = self.au_extractor.format_for_prompt(au_result)
+            print(f"[Step 2] Active AUs: {au_result.active_aus}")
+        else:
+            result.active_aus = []
+            result.au_descriptions = "- No landmark data available (face detection skipped)"
+            print("[Step 2] Skipped — no landmarks available.")
 
         # ===== STEP 3: Emotion Classification =====
         print("[Step 3] Classifying emotion...")
@@ -372,12 +400,17 @@ class XAIEmotionPipeline:
 
         # Generate and save XAI Visualization Panel
         np_img = np.array(face_result.face_crop_pil)
-        
-        # Landmark overlay
-        ldmk_img = draw_landmarks(
-            np_img, 
-            face_result.landmarks.cpu().numpy() if hasattr(face_result.landmarks, 'cpu') else face_result.landmarks
-        )
+
+        # Landmark overlay — use empty array when landmarks are unavailable (e.g. --no-crop mode)
+        if face_result.landmarks_pixel is not None:
+            lm_for_draw = (
+                face_result.landmarks_pixel.cpu().numpy()
+                if hasattr(face_result.landmarks_pixel, "cpu")
+                else face_result.landmarks_pixel
+            )
+        else:
+            lm_for_draw = np.empty((0, 2), dtype=np.float32)
+        ldmk_img = draw_landmarks(np_img, lm_for_draw)
         
         # Heatmap overlay
         hm_img = draw_heatmap_overlay(np_img, raw_cam)

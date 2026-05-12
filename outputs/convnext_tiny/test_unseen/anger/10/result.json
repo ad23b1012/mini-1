@@ -1,0 +1,42 @@
+{
+  "image_path": "Test\\10.png",
+  "processing_time": 9.49,
+  "face_found": true,
+  "emotion": {
+    "label": "anger",
+    "confidence": 0.7518,
+    "top_predictions": [
+      {
+        "label": "anger",
+        "confidence": 0.7518
+      },
+      {
+        "label": "neutral",
+        "confidence": 0.0532
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0513
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0209)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8374)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1059)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.6345)\n- AU25 (Lips Part): lips parted (strength: 1.3667)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 2.2720)"
+  },
+  "attention": {
+    "regions": [
+      "mouth"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.48)"
+  },
+  "explanation": "The predicted emotion is anger because the face exhibits several key facial actions that are characteristic of anger:\n\n1. **Raised Inner Eyebrows**: This indicates arousal and excitement.\n2. **Lip Corners Raised**: The upward movement of the lips suggests heightened emotional state.\n3. **Smile**: The relaxed appearance of the smile indicates happiness or amusement.\n4. **Asymmetric Lip Movement**: One side of the lips may be more prominent than the other, which could indicate frustration or irritation.\n5. **Frown**: The asymmetrical nature of the frown suggests displeasure or annoyance.\n6. **Lips Partened**: The parting of the lips can indicate anger or frustration.\n7. **Mouth Open**: The open mouth posture",
+  "visualizations": {}
+}

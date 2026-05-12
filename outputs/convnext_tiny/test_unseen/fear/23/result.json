@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\23.jpeg",
+  "processing_time": 10.16,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.4825,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.4825
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.4051
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0591
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2876)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4081)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3948)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.0155)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0482)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.3316)\n- AU25 (Lips Part): lips parted (strength: 0.6409)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.6336)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_eyebrow"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.42)\n- Mild attention on right eyebrow region (intensity: 0.35)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits several key facial actions that are characteristic of the emotion:\n\n1. **Raised Inner Eyebrows**: This indicates arousal and potential distress.\n2. **Wide Open Eyes**: Fear often involves increased alertness and awareness.\n3. **Open Mouth**: Fear can manifest by opening one's mouth widely.\n4. **Lips Partly Open**: This suggests relaxation or relief from tension.\n\nThese features are consistent with the expected facial expressions associated with fear. The moderate level of attention on the nose area supports this interpretation, indicating a more relaxed state rather than heightened anxiety or excitement. The mild attention on the right eyebrow region further supports the idea of a more subdued emotional state. The presence of the",
+  "visualizations": {}
+}

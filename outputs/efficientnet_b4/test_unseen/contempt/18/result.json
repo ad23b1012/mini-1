@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\18.jpeg",
+  "processing_time": 8.29,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.871,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.871
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0369
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0355
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1423)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2564)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1050)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0438)\n- AU25 (Lips Part): lips parted (strength: 0.2915)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4940)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.54)\n- Moderate attention on nose area (intensity: 0.46)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of facial features and model attention regions that align closely with the observed contorted facial expression. The contorted jaw drop, asymmetrical lip movement, and slightly tilted head contribute to the disgust prediction, which has a confidence score of 3.7%. This alignment supports the conclusion that the face exhibits disgust, as it matches the typical expression associated with disgust. The moderate attention on the mouth and lip region further reinforces this interpretation, indicating a strong emotional response. The presence of a one-sided dimple and slight head tilt also contributes to the disgust prediction, as they suggest a more aggressive or angry expression. The lack of support from the expected FACS features (unilateral lip corner pull, one-sided dimple,",
+  "visualizations": {}
+}

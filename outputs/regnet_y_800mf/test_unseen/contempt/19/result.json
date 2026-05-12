@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\19.jpeg",
+  "processing_time": 8.05,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.7714,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.7714
+      },
+      {
+        "label": "anger",
+        "confidence": 0.077
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.0472
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1522)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2295)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.0368)\n- AU25 (Lips Part): lips parted (strength: 0.3144)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5384)"
+  },
+  "attention": {
+    "regions": [
+      "right_cheek",
+      "right_eyebrow",
+      "left_eyebrow"
+    ],
+    "summary": "- Moderate attention on right cheek area (intensity: 0.47)\n- Mild attention on right eyebrow region (intensity: 0.32)\n- Mild attention on left eyebrow region (intensity: 0.32)"
+  },
+  "explanation": "The predicted emotion of \"contempt\" was correctly identified based on the observed facial features and model attention regions. The facial action units (AU) detected include:\n\n- **AU1 (Inner Brow Raise)**: Inner eyebrows raised, which is characteristic of contempt.\n- **AU5 (Upper Lid Raise)**: Eyes wide open, indicating strong positive emotions.\n- **AU12 (Lip Corner Puller)**: Lip corners pulled up, suggesting a smile.\n- **AU25 (Lips Part)**: Lips parted, showing a relaxed state.\n- **AU26 (Jaw Drop)**: Mouth open, indicating a neutral expression.\n\nThese features align well with the expected FACS features for contempt, including unilateral lip corner pull (",
+  "visualizations": {}
+}

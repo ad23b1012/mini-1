@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\19.jpeg",
+  "processing_time": 8.44,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.6462,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.6462
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.129
+      },
+      {
+        "label": "happy",
+        "confidence": 0.1244
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1522)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2295)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.0368)\n- AU25 (Lips Part): lips parted (strength: 0.3144)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5384)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_cheek",
+      "right_eye"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.60)\n- Moderate attention on right cheek area (intensity: 0.55)\n- Moderate attention on right eye region (intensity: 0.52)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of facial features and model attention regions. The detected AU1 (inner eyebrow raise), AU5 (upper lid raise), AU12 (lip corner pull), AU25 (lips part), and AU26 (jaw drop) all contribute to the appearance of contempt. The raised inner eyebrows indicate anger or frustration, while the upward lip corners suggest disgust or displeasure. The slight head tilt and lips being slightly pressed further reinforce the feeling of contempt due to the aggressive nature of the expression. The moderate attention on the nose and right cheek areas also supports the perception of disgust or displeasure. The absence of any other significant facial features that could indicate happiness or surprise further confirms the emotion of contempt. The",
+  "visualizations": {}
+}

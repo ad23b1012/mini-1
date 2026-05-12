@@ -1,6 +1,6 @@
 {
   "image_path": "Test\\4.png",
-  "processing_time": 10.45,
+  "processing_time": 9.59,
   "face_found": true,
   "emotion": {
     "label": "disgust",

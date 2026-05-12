@@ -1,0 +1,46 @@
+{
+  "image_path": "Test\\21.jpeg",
+  "processing_time": 8.37,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.6094,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.6094
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1361
+      },
+      {
+        "label": "contempt",
+        "confidence": 0.0725
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2071)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4245)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2717)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5518)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0479)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1810)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0116)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.1555)"
+  },
+  "attention": {
+    "regions": [
+      "right_eyebrow",
+      "right_eye",
+      "forehead"
+    ],
+    "summary": "- Moderate attention on right eyebrow region (intensity: 0.62)\n- Mild attention on right eye region (intensity: 0.33)\n- Mild attention on forehead area (intensity: 0.32)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised eyebrows, frowning, and inwardly looking eyes. The moderate attention on the right eyebrow region supports this interpretation, indicating that the person is experiencing emotional distress. The mild attention on the right eye region and forehead area also suggests a sense of unease or discomfort, which aligns with the concept of sadness. The presence of lip corners pulled down and chin raised/wrinkled further reinforces the feeling of sadness, as these actions often accompany feelings of depression or melancholy. The combination of these features and the moderate attention points towards a patient who is likely experiencing sadness.",
+  "visualizations": {}
+}

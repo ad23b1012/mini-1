@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\2.png",
+  "processing_time": 8.84,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.8472,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.8472
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0802
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.043
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3372)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5241)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.1697)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1328)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0993)\n- AU25 (Lips Part): lips parted (strength: 0.3071)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4262)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "right_eye",
+      "right_eyebrow"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.45)\n- Moderate attention on right eye region (intensity: 0.40)\n- Mild attention on right eyebrow region (intensity: 0.38)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the face exhibits several key facial actions that are characteristic of sadness:\n\n1. **Inner Eyebrows Raised**: This indicates a state of emotional distress.\n2. **Lip Corners Pulled Up**: The upward movement of the lips suggests feelings of sadness or disappointment.\n3. **Chin Raised/Wrinkled**: The outward curvature of the chin further emphasizes the emotional state.\n\nThese features are consistent with the expected sadness profile based on the FACS features provided. The moderate attention on the nose area and right eye region also supports this interpretation, as they are typically associated with positive emotions like happiness or joy.\n\nGiven the high confidence score of 84.7%, it is reasonable to conclude",
+  "visualizations": {}
+}

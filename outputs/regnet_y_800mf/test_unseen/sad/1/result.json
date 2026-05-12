@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\1.png",
+  "processing_time": 8.56,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.7964,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.7964
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0853
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0634
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1762)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5058)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8673)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1480)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.0587)\n- AU25 (Lips Part): lips parted (strength: 0.2810)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.0577)"
+  },
+  "attention": {
+    "regions": [
+      "left_eye",
+      "nose",
+      "left_eyebrow"
+    ],
+    "summary": "- Moderate attention on left eye region (intensity: 0.63)\n- Moderate attention on nose area (intensity: 0.60)\n- Moderate attention on left eyebrow region (intensity: 0.44)"
+  },
+  "explanation": "The predicted emotion of sadness was correctly identified based on the observed facial features and model attention regions. The key features that support this prediction include:\n\n1. **Inner Eyebrows Raised**: This indicates a state of emotional distress or sadness.\n2. **Lip Corners Pulled Up**: This action often associated with feelings of sadness, such as when someone is crying or feeling overwhelmed.\n3. **Chin Raising/Wrinkling**: This feature is commonly used to indicate sadness, especially in expressions like frowning or looking away from others.\n\nGiven the moderate attention on the left eye region and the moderate attention on the nose area, it suggests that the model is paying close attention to these areas, which aligns well with the detection of sadness.",
+  "visualizations": {}
+}

@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\7.png",
+  "processing_time": 7.38,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.8347,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.8347
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.1132
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0245
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0659)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4113)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5905)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.4339)\n- AU25 (Lips Part): lips parted (strength: 0.7800)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7070)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "left_eyebrow",
+      "nose"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.70)\n- Moderate attention on left eyebrow region (intensity: 0.55)\n- Moderate attention on nose area (intensity: 0.55)"
+  },
+  "explanation": "The predicted emotion of sadness was correctly identified based on the observed facial features and model attention regions. The key features that support this prediction include:\n\n1. **Inner Eyebrows Raised**: This indicates a state of emotional distress, often associated with sadness.\n2. **Lip Corners Pulled Up**: This action suggests a feeling of heaviness or tension, which is common in sadness.\n3. **Chin Raised/Wrinkled**: This feature is characteristic of sadness, where the forehead wrinkles indicate stress or discomfort.\n\nThe moderate attention on the mouth and lip region also supports this emotion, as they are areas where emotions like sadness can be expressed through facial expressions. The moderate attention on the left eyebrow region further reinforces the association between sadness and the appearance",
+  "visualizations": {}
+}

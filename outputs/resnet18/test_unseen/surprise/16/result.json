@@ -1,0 +1,37 @@
+{
+  "image_path": "Test\\16.jpeg",
+  "processing_time": 7.64,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.5594,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.5594
+      },
+      {
+        "label": "fear",
+        "confidence": 0.3069
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0495
+      }
+    ]
+  },
+  "action_units": {
+    "active": [],
+    "descriptions": "- No landmark data available (face detection skipped)"
+  },
+  "attention": {
+    "regions": [
+      "left_eye",
+      "left_eyebrow",
+      "nose"
+    ],
+    "summary": "- Strong attention on left eye region (intensity: 0.81)\n- Strong attention on left eyebrow region (intensity: 0.79)\n- Moderate attention on nose area (intensity: 0.68)"
+  },
+  "explanation": "The predicted emotion of \"surprise\" was correctly identified based on the observed facial features and model attention regions. The strong attention on the left eye region indicates a confident expression, while the moderate attention on the left eyebrow region suggests a relaxed state. The presence of both raised eyebrows and widened eyes aligned well with the expected facial expressions associated with surprise. The absence of any other significant features further supports the prediction. The moderate intensity of the attention on the nose area also contributes to the overall confident expression. This combination of features and attentional patterns strongly indicate that the face is displaying a clear and confident expression of surprise.",
+  "visualizations": {}
+}

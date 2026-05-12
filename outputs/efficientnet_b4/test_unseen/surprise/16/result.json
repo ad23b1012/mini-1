@@ -1,0 +1,36 @@
+{
+  "image_path": "Test\\16.jpeg",
+  "processing_time": 15.27,
+  "face_found": true,
+  "emotion": {
+    "label": "surprise",
+    "confidence": 0.7752,
+    "top_predictions": [
+      {
+        "label": "surprise",
+        "confidence": 0.7752
+      },
+      {
+        "label": "fear",
+        "confidence": 0.094
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0427
+      }
+    ]
+  },
+  "action_units": {
+    "active": [],
+    "descriptions": "- No landmark data available (face detection skipped)"
+  },
+  "attention": {
+    "regions": [
+      "right_eye",
+      "nose"
+    ],
+    "summary": "- Mild attention on right eye region (intensity: 0.32)\n- Mild attention on nose area (intensity: 0.32)"
+  },
+  "explanation": "The predicted emotion was determined to be \"surprise\" due to several key facial features that align well with this emotion:\n\n1. **Raised Inner Eyebrows**: This feature is characteristic of surprise and indicates excitement or anticipation.\n2. **Wide Open Eyes**: The wide opening suggests a state of alertness or heightened awareness, which is often associated with surprise.\n3. **Jaw Dropped**: Dropping the jaw further than expected can indicate discomfort or shock, which is also typical of surprise.\n\nThese features are supported by the moderate intensity of the model's attention on the right eye region and the mild attention on the nose area, both of which contribute to the overall confident prediction of \"surprise.\" The slight discrepancy between the predicted confidence score (",
+  "visualizations": {}
+}

@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\3.png",
+  "processing_time": 9.75,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.5586,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.5586
+      },
+      {
+        "label": "anger",
+        "confidence": 0.2728
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0814
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU24",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3631)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5459)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3342)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.4243)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.1646)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1630)\n- AU24 (Lip Pressor): lips pressed together (strength: 0.0059)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3314)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.51)\n- Mild attention on nose area (intensity: 0.33)"
+  },
+  "explanation": "The predicted emotion of \"contempt\" is supported by several key facial features:\n\n1. **Raised Inner Brows**: The observation of raised inner eyebrows indicates a defensive or aggressive stance.\n2. **Lips Open**: The appearance of open lips suggests a relaxed or neutral expression.\n3. **One-Sided Dimple**: The presence of a noticeable one-sided dimple further supports the concept of contempt.\n4. **Smiling Expression**: The combination of smiling and the upward gaze indicates a positive emotional state.\n\nGiven these observations, the model correctly identified that the face is showing \"contempt.\" The nuanced features such as the raised inner eyebrows, open lips, and the one-sided dimple all contribute to the overall perception of a defensive or angry expression",
+  "visualizations": {}
+}

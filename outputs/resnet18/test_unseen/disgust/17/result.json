@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\17.jpeg",
+  "processing_time": 11.2,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.4097,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.4097
+      },
+      {
+        "label": "anger",
+        "confidence": 0.2544
+      },
+      {
+        "label": "fear",
+        "confidence": 0.2413
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1685)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2225)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8362)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2022)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1939)\n- AU25 (Lips Part): lips parted (strength: 0.3136)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.2160)"
+  },
+  "attention": {
+    "regions": [
+      "left_cheek",
+      "left_eye",
+      "nose"
+    ],
+    "summary": "- Strong attention on left cheek area (intensity: 0.79)\n- Strong attention on left eye region (intensity: 0.75)\n- Strong attention on nose area (intensity: 0.72)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits strong features indicative of disgust such as raised eyebrows, widened eyes, and frowning. The facial action units (AU) show asymmetrical lip movements, which are characteristic of disgust. The top alternative prediction also includes these features, further confirming that the face is showing disgust. The strong attention on the left cheek area and left eye region supports this conclusion, indicating a more intense emotional response. The presence of the nose wrinkling feature and the lower jaw drooping indicate a more aggressive or angry expression, but the overall combination of raised eyebrows, widened eyes, and frowning strongly suggests disgust.",
+  "visualizations": {}
+}

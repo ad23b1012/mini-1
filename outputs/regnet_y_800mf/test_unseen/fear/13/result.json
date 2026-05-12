@@ -1,0 +1,45 @@
+{
+  "image_path": "Test\\13.png",
+  "processing_time": 7.13,
+  "face_found": true,
+  "emotion": {
+    "label": "fear",
+    "confidence": 0.7635,
+    "top_predictions": [
+      {
+        "label": "fear",
+        "confidence": 0.7635
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1537
+      },
+      {
+        "label": "sad",
+        "confidence": 0.0378
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.2722)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5080)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3665)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.6964)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.3975)\n- AU25 (Lips Part): lips parted (strength: 0.4170)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.5687)"
+  },
+  "attention": {
+    "regions": [
+      "left_eyebrow",
+      "left_eye",
+      "right_eye"
+    ],
+    "summary": "- Moderate attention on left eyebrow region (intensity: 0.51)\n- Mild attention on left eye region (intensity: 0.39)\n- Mild attention on right eye region (intensity: 0.38)"
+  },
+  "explanation": "The predicted emotion is likely \"fear\" because the face exhibits several key facial action units that are characteristic of the fearful state:\n\n1. **Inner Brow Raise**: The raised inner eyebrows indicate alertness and concern.\n2. **Eye Open/Lip Corners**: The wide open eyes and pursed lips suggest anxiety or distress.\n3. **Mouth Open/Jaw Dropped**: This indicates fear and potential aggression.\n4. **Lip Corners**: The lip corners being pulled up suggests tension or anger.\n\nThese features are consistent with the expected facial expressions associated with the emotion of fear. The moderate level of attention on the left eye region supports this interpretation, as it indicates a more focused gaze rather than general awareness of the surroundings. The mild",
+  "visualizations": {}
+}

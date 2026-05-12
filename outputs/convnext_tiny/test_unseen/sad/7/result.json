@@ -1,0 +1,43 @@
+{
+  "image_path": "Test\\7.png",
+  "processing_time": 8.9,
+  "face_found": true,
+  "emotion": {
+    "label": "sad",
+    "confidence": 0.9531,
+    "top_predictions": [
+      {
+        "label": "sad",
+        "confidence": 0.9531
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0268
+      },
+      {
+        "label": "disgust",
+        "confidence": 0.0053
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU12",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.0659)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.4113)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.5905)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.4339)\n- AU25 (Lips Part): lips parted (strength: 0.7800)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.7070)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "mouth"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.49)\n- Moderate attention on mouth and lip region (intensity: 0.40)"
+  },
+  "explanation": "The predicted emotion is correctly identified as \"sad\" because the facial action units (FAUs) detected show signs of sadness such as raised inner eyebrows, furrowed eyebrows, and pulled-down lip corners. These features align well with the expected sadness patterns in the FACS dataset. The moderate attention on the nose area supports this prediction by indicating that the face is likely expressing emotional distress. The presence of the smile (AU12) and frown (AU15) further reinforces the negative emotions associated with sadness. The slight openness of the mouth (AU26) and the drooping jaw (AU25) also contribute to the overall expression of sadness. The moderate intensity of the attention on the mouth and lip region suggests that the face",
+  "visualizations": {}
+}

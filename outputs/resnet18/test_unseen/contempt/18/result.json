@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\18.jpeg",
+  "processing_time": 8.23,
+  "face_found": true,
+  "emotion": {
+    "label": "contempt",
+    "confidence": 0.6798,
+    "top_predictions": [
+      {
+        "label": "contempt",
+        "confidence": 0.6798
+      },
+      {
+        "label": "fear",
+        "confidence": 0.1201
+      },
+      {
+        "label": "anger",
+        "confidence": 0.0782
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1423)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2564)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 2.1050)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.0438)\n- AU25 (Lips Part): lips parted (strength: 0.2915)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.4940)"
+  },
+  "attention": {
+    "regions": [
+      "mouth",
+      "nose",
+      "left_cheek"
+    ],
+    "summary": "- Strong attention on mouth and lip region (intensity: 0.74)\n- Strong attention on nose area (intensity: 0.72)\n- Moderate attention on left cheek area (intensity: 0.51)"
+  },
+  "explanation": "The predicted emotion is determined by the combination of facial action units (FAU) that show a contorted mouth and widened eyes, which aligns with the expected contorted face posture associated with contempt. The strong attention on the mouth and lip region indicates a more intense emotional state, further supporting the prediction. The presence of asymmetrical smiles and one-sided dimples also contribute to the contemptuous appearance. The moderate attention on the nose area suggests a more subtle expression, but it's consistent with the contorted face posture. The slight head tilt and lips may be slightly pressed are supportive of the contorted mouth and widened eyes. The overall consistency across all FAU types supports the conclusion that the predicted emotion is indeed contempt.",
+  "visualizations": {}
+}

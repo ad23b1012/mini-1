@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\8.png",
+  "processing_time": 7.49,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.4492,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.4492
+      },
+      {
+        "label": "fear",
+        "confidence": 0.248
+      },
+      {
+        "label": "surprise",
+        "confidence": 0.1371
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU2",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.3312)\n- AU2 (Outer Brow Raise): outer eyebrows raised (strength: 0.5694)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.3209)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.3594)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2938)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.2461)\n- AU25 (Lips Part): lips parted (strength: 0.3456)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.3961)"
+  },
+  "attention": {
+    "regions": [
+      "mouth"
+    ],
+    "summary": "- Moderate attention on mouth and lip region (intensity: 0.49)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and potential distress.\n2. **Lowered Outer Brows**: Similar to raising them, it suggests discomfort or unease.\n3. **Raised Lip Corners**: This action often conveys anger or frustration.\n4. **Pulled Lip Corners Down**: This is a classic sign of disgust, indicating disgust or disgust-related emotions.\n\nThe combination of these features strongly correlates with disgust. The moderate level of attention on the mouth and lip region further supports this prediction by highlighting the emotional content of the face. The presence of the expected FACS features\u2014nose wrinkling, upper lip raised,",
+  "visualizations": {}
+}

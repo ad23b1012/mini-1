@@ -1,0 +1,44 @@
+{
+  "image_path": "Test\\17.jpeg",
+  "processing_time": 8.53,
+  "face_found": true,
+  "emotion": {
+    "label": "disgust",
+    "confidence": 0.5455,
+    "top_predictions": [
+      {
+        "label": "disgust",
+        "confidence": 0.5455
+      },
+      {
+        "label": "anger",
+        "confidence": 0.3533
+      },
+      {
+        "label": "fear",
+        "confidence": 0.0537
+      }
+    ]
+  },
+  "action_units": {
+    "active": [
+      "AU1",
+      "AU5",
+      "AU12",
+      "AU14",
+      "AU15",
+      "AU25",
+      "AU26"
+    ],
+    "descriptions": "- AU1 (Inner Brow Raise): inner eyebrows raised (strength: 1.1685)\n- AU5 (Upper Lid Raise): eyes wide open (strength: 0.2225)\n- AU12 (Lip Corner Puller): lip corners pulled up (smile) (strength: 1.8362)\n- AU14 (Dimpler): asymmetric lip movement (one-sided) (strength: 0.2022)\n- AU15 (Lip Corner Depressor): lip corners pulled down (frown) (strength: 0.1939)\n- AU25 (Lips Part): lips parted (strength: 0.3136)\n- AU26 (Jaw Drop): mouth open (jaw dropped) (strength: 1.2160)"
+  },
+  "attention": {
+    "regions": [
+      "nose",
+      "left_cheek"
+    ],
+    "summary": "- Moderate attention on nose area (intensity: 0.41)\n- Mild attention on left cheek area (intensity: 0.35)"
+  },
+  "explanation": "The predicted emotion is disgust because the face exhibits several key facial actions that are characteristic of disgust:\n\n1. **Raised Inner Brows**: This indicates arousal and potential distress.\n2. **Lip Corners Raised**: The upward movement suggests discomfort or irritation.\n3. **Lip Corners Pulled Down**: This action conveys a sense of frustration or displeasure.\n4. **Lowered Eyebrows**: This is often associated with disgust due to the emotional state it represents.\n\nThe moderate attention on the nose area supports this interpretation, indicating that the face is reacting to a potentially unpleasant stimulus. The mild attention on the left cheek area further emphasizes the emotional response, suggesting that the face is experiencing discomfort or unease. These features collectively paint a",
+  "visualizations": {}
+}
